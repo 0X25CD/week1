@@ -4,7 +4,7 @@ include "../../node_modules/circomlib/circuits/comparators.circom";
 
 template LessThan10() {
     signal input in;
-    signal output out;
+    signal output out; // 0 or 1
 
     component lt = LessThan(32); 
 
@@ -13,3 +13,5 @@ template LessThan10() {
 
     out <== lt.out;
 }
+
+component main = LessThan10();
